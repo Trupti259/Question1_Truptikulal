@@ -1,0 +1,22 @@
+<?php  
+$string = "BOOKKEEPER";  
+$cnt;  
+   
+print("Occured more than once in a given string:");  
+for($i = 0; $i < strlen($string); $i++) 
+{  
+    $cnt = 1;  
+    for($j = $i+1; $j < strlen($string); $j++) 
+  {  
+        if($string[$i] == $string[$j] && $string[$i] != ' ') 
+    {  
+            $cnt++;   
+            $string[$j] = '0';  
+     }  
+  }  
+    if($cnt > 1 && $string[$i]  != '0')
+  {  
+        print($string[$i]);   
+   }  
+}  
+?>
